@@ -1,11 +1,8 @@
-// frontend/components/Expense/AddExpenseForm.jsx
-
 import React, { useState } from 'react';
 import Input from '../../components/Inputs/Input';
 import EmojiPickerPopup from '../EmojiPickerPopup';
 
 const AddExpenseForm = ({ onAddExpense }) => {
-    // FIX: Renamed state variable to 'expense' for clarity
     const [expense, setExpense] = useState({
         category: "",
         amount: "",
@@ -22,13 +19,11 @@ const AddExpenseForm = ({ onAddExpense }) => {
 
     return (
         <div>
-            {/* FIX: Corrected onSelect parameter and handleChange key */}
             <EmojiPickerPopup
                 icon={expense.icon}
                 onSelect={(selectedIcon) => handleChange('icon', selectedIcon)}
             />
 
-            {/* FIX: Corrected value binding and handleChange key */}
             <Input
                 value={expense.category}
                 onChange={({ target }) => handleChange('category', target.value)}
@@ -45,7 +40,6 @@ const AddExpenseForm = ({ onAddExpense }) => {
                 type="number"
             />
 
-            {/* FIX: Corrected handleChange key */}
             <Input
                 value={expense.date}
                 onChange={({ target }) => handleChange('date', target.value)}
@@ -57,7 +51,7 @@ const AddExpenseForm = ({ onAddExpense }) => {
             <div className='flex justify-end mt-6'>
                 <button
                     type='button'
-                    className='but-primary' // FIX: Changed class to match others for consistency
+                    className='but-primary' 
                     onClick={handleFormSubmit}
                 >
                     Add Expense

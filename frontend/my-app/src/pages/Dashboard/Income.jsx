@@ -1,5 +1,3 @@
-// frontend/pages/Income.jsx
-
 import React, { useState, useEffect } from "react";
 import DashboardLayout from "../../components/layouts/DashboardLayout";
 import axiosInstance from "../../utils/axiosInstance";
@@ -78,7 +76,6 @@ const Income = () => {
     }
   };
 
-  // FIX: The function now accepts the 'id' of the income to be deleted
   const deleteIncome = async (id) => {
     try {
       await axiosInstance.delete(API_PATHS.INCOME.DELETE_INCOME(id));
@@ -107,7 +104,7 @@ const Income = () => {
       const link = document.createElement("a");
       link.href = url;
       link.setAttribute("download", "income_details.xlsx");
-      document.body.appendChild(link); // Required for Firefox
+      document.body.appendChild(link); 
       link.click();
       link.parentNode.removeChild(link);
       window.URL.revokeObjectURL(url);

@@ -1,9 +1,6 @@
-// frontend/components/Expense/ExpenseOverview.jsx
-
 import React, { useState, useEffect } from 'react';
 import { LuPlus } from 'react-icons/lu';
 import CustomLineChart from '../Charts/CustomLineChart';
-// FIX: Changed to import the correct helper function
 import { prepareExpenseLineChartData } from '../../utils/helper';
 
 const ExpenseOverview = ({ transactions, onAddExpense }) => {

@@ -17,7 +17,7 @@ const getBarColor = (index) => {
 const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
-    const title = data.category || data.month; // Use 'month' as a fallback for the title
+    const title = data.category || data.month; 
     return (
       <div className="bg-white shadow-md rounded-lg p-2 border border-gray-300">
         <p className="text-xs font-semibold text-purple-800 mb-1">{` ${title}`}</p>
